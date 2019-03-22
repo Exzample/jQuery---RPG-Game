@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,93 +8,97 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Document</title>
     <style>
-    body {
+        body {
             margin: 0%;
             padding: 0%;
             background-size: cover;
             background-repeat: no-repeat
         }
         
-    .Container{
-        display: flex;
-        justify-content: center;
-        height: 80%;
-        width: 80%;
-        background-color: rgba(113, 194, 241, 0.904);
-        margin: 5% 0% 5% 10%;
-        flex-direction: column;        
-    }
-
-    .userChoiceContainer {
-        display: flex;
-        margin: 2%;
-        height: relative;
-        width: 95%;
-        justify-self: start;
-        flex-direction: row;
-    }
-    
+        img {
+            height: 100px;
+            width: 100px;
+        }
+        
+        .Container {
+            display: flex;
+            justify-content: center;
+            height: 80%;
+            width: 80%;
+            background-color: rgba(113, 194, 241, 0.904);
+            margin: 5% 0% 5% 10%;
+            flex-direction: column;
+        }
+        
+        .userChoiceContainer {
+            display: flex;
+            margin: 2%;
+            height: relative;
+            width: 95%;
+            justify-self: start;
+            flex-direction: row;
+        }
+        
         .heroContainer {
-        display: flex;
-        justify-content: center;
-        height: 200px;
-        width: 50%;
-        margin-right: 2%;
-        background-color: rgb(218, 49, 49);
-    }
-       
-    .villianContainer {
-        display: flex;
-        justify-content: center;
-        height: 200px;
-        width: 50%;
-        margin-left: 0%;
-    }
-
-    .userChoiceContainer {
-        display: flex;
-        height: 200px;
-        width: 95%;
-    }
-
-    .battleArea {
-        display: flex;
-        justify-content: center;
-        background-color: #cccccc;
-        height: 200px;
-        width: 95%;
-        margin-left: 2%;
-        margin-bottom: 2%;
-    }
-
-    .userBattleContainer {
-        display: flex;
-        justify-content: center;
-        height: 200px;
-        width: 50%;
-        background-color: rgb(255,255,255);   
-    }
-
-    .versusContainer {
-        background-color: rgba(113, 194, 241, 0.904)
-        ?  ;
-        font-size: 300%;        
-       }
-
-    .villanBattleContainer {
-        display: flex;
-        justify-content: center;
-        height: 200px;
-        width: 50%;
-        margin-left: 0%;
-       background-color: chartreuse;
-    }
-
+            display: flex;
+            justify-content: center;
+            height: 200px;
+            width: 50%;
+            margin-right: 2%;
+            background-color: rgb(218, 49, 49);
+        }
+        
+        .villianContainer {
+            display: flex;
+            justify-content: center;
+            height: 200px;
+            width: 50%;
+            margin-left: 0%;
+        }
+        
+        .userChoiceContainer {
+            display: flex;
+            height: 200px;
+            width: 95%;
+        }
+        
+        .battleArea {
+            display: flex;
+            justify-content: center;
+            background-color: #cccccc;
+            height: 200px;
+            width: 95%;
+            margin-left: 2%;
+            margin-bottom: 2%;
+        }
+        
+        .userBattleContainer {
+            display: flex;
+            justify-content: center;
+            height: 200px;
+            width: 50%;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .versusContainer {
+            background-color: rgba(113, 194, 241, 0.904) ?;
+            font-size: 300%;
+        }
+        
+        .villanBattleContainer {
+            display: flex;
+            justify-content: center;
+            height: 200px;
+            width: 50%;
+            margin-left: 0%;
+            background-color: chartreuse;
+        }
     </style>
- 
+
 </head>
+
 <body>
-    
+
     <script type="text/javascript">
         $(document).ready(function() {
             //jQuery CDN loaded?//
@@ -104,18 +109,22 @@
             // Creates a new container div and appends to the body"
             $('body').prepend(containerDiv);
             // Adds the background image to the body//
-            $('body').css('background-image','url(./Assets/Images/BodyBackground.jpg)')
-            // Create nested Div inside of container for character choices to sit in
+            $('body').css('background-image', 'url(./Assets/Images/BodyBackground.jpg)')
+                // Create nested Div inside of container for character choices to sit in
             var userChoiceDiv = $('<div><h1>Click to Choose your Character</h1></div>');
             $(containerDiv).append(userChoiceDiv);
             $(userChoiceDiv).addClass('userChoiceContainer');
+            var userAvatar = $('<div><img></div>')
+            $(".heroContainer").append(userChoiceDiv);
+            $('.heroContainer').css('background-image', 'url(./Assets/Images/V-Emoji.jpg)');
+            $('<img>').addClass('Image');
             // Adds the class "Container" to the first div
             $(containerDiv).addClass('Container');
             // Sets the background-color of the container div
             $(containerDiv).css('rgba(113, 194, 241, 0.904)');
             // Creates a new div that says, "Heroes go in here"          
             var heroDiv = $('<div><h2>Heroes go in here</h2></div>')
-            // appends the heroDiv as a child of the containerDiv
+                // appends the heroDiv as a child of the containerDiv
             $(userChoiceDiv).append(heroDiv);
             // Gives the heroDiv a class of heroContainer
             $(heroDiv).addClass('heroContainer');
@@ -145,8 +154,9 @@
             $(villianBattle).addClass('villanBattleContainer')
 
             // now you need to create avatars and buttons for the characters//
-                                 
+
         });
     </script>
 </body>
+
 </html>
