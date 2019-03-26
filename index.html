@@ -20,7 +20,7 @@
             width: 100px;
             display: flex;
             margin: 2%;
-            background-color: rgb(117, 117, 117);          
+            background-color: rgb(117, 117, 117);
         }
         
         .Container {
@@ -49,24 +49,23 @@
         
         .heroContainer {
             display: flex;
-            align-content: center
-            flex-wrap: inherit;
+            align-content: center flex-wrap: inherit;
             flex-direction: row;
             height: inherit;
             width: inherit;
-            margin-right: 2%;            
+            margin-right: 2%;
         }
         
         .villianContainer {
             display: flex;
             justify-content: center;
-            flex-wrap: inherit; 
-            flex-direction: row;          
+            flex-wrap: inherit;
+            flex-direction: row;
             height: inherit;
             width: inherit;
             margin-left: 0%;
         }
-         
+        
         .battleAreaContainer {
             display: flex;
             justify-content: center;
@@ -75,9 +74,9 @@
             height: inherit;
             width: inherit;
             margin-left: 2%;
-            margin-bottom: 2%;            
+            margin-bottom: 2%;
         }
-
+        
         #stats {
             display: flex;
             float: left;
@@ -85,7 +84,7 @@
             flex-direction: column;
             height: 180px;
             width: inherit;
-            margin: 2%;          
+            margin: 2%;
             background-color: rgb(113, 194, 241);
         }
         
@@ -116,13 +115,11 @@
         }
         
         .textHeader {
-            display: flex;            
+            display: flex;
         }
-
+        
         #avatar-v {
             align-self: center;
-            
-
         }
     </style>
 
@@ -137,66 +134,71 @@
             //create a newContainer div with jQuery
             //$(selector).add(element,context)
             var containerDiv = $('<div></div>');
-                // Creates a new container div and appends to the body"
-                $('body').prepend(containerDiv);
-                // Adds the background image to the body//
-                $('body').css('background-image', 'url(./Assets/Images/BodyBackground.jpg)')
+            // Creates a new container div and appends to the body"
+            $('body').prepend(containerDiv);
+            // Adds the background image to the body//
+            $('body').css('background-image', 'url(./Assets/Images/BodyBackground.jpg)')
                 // Create nested Div inside of container for character choices to sit in
             var userChoiceDiv = $('<div><h1>Click to Choose your Character</h1></div>');
-                $(containerDiv).append(userChoiceDiv);
-                $(userChoiceDiv).addClass('userChoiceContainer');
-                // Adds the class "Container" to the first div
-                $(containerDiv).addClass('Container');
-                // Sets the background-color of the container div
-                $(containerDiv).css('rgba(113, 194, 241, 0.904)');
+            $(containerDiv).append(userChoiceDiv);
+            $(userChoiceDiv).addClass('userChoiceContainer');
+            // Adds the class "Container" to the first div
+            $(containerDiv).addClass('Container');
+            // Sets the background-color of the container div
+            $(containerDiv).css('rgba(113, 194, 241, 0.904)');
             // Creates a new div that says, "Heroes go in here"          
             var heroDiv = $('<div><h2 class="textHeader">Heroes go in here</h2></div>')
                 // Appends the heroDiv as a child of the containerDiv
-                $(userChoiceDiv).append(heroDiv);
-                // Gives the heroDiv a class of heroContainer
-                $(heroDiv).addClass('heroContainer');
-                // Sets the background-color of the div
-                $('.heroContainer').css('background-color', 'rgb(255, 255, 255)');
+            $(userChoiceDiv).append(heroDiv);
+            // Gives the heroDiv a class of heroContainer
+            $(heroDiv).addClass('heroContainer');
+            // Sets the background-color of the div
+            $('.heroContainer').css('background-color', 'rgb(255, 255, 255)');
             //Placing user avatar <img> in the .heroContainer
             var userAvatar = $('<div id="userChoice"></div><br><hr>');
-                $(heroDiv).append(userAvatar);
-                $(heroDiv).append($('<img>', { id: 'avatar-v', src: "./Assets/Images/V.jpg" }));      
-                $(heroDiv).append($('<img>', { id: 'avatar-v', src: "./Assets/Images/V.jpg" }));      
-                $(heroDiv).append($('<img>', { id: 'avatar-v', src: "./Assets/Images/V.jpg" }));      
+            $(heroDiv).append(userAvatar);
+            $(heroDiv).append($('<img>', {
+                id: 'avatar-v',
+                src: "./Assets/Images/V-Emoji.jpg"
+            }));
             // Creates new div to place villians//
             var villianChoiceDiv = $('<div><h2 class="textHeader">Villians go here!</h2></div>');
             // Appends the villianDiv to the containerDiv
-                $(userChoiceDiv).append(villianChoiceDiv);
-                // Gives villianDiv the class of villianContainer
-                $(villianChoiceDiv).addClass('villianContainer');
-                // Setsd the background-color of the div
-                $('.villianContainer').css('background-color', 'rgb(218, 49, 49)');
-                // Placing villians avatar <img> in the villianContainer
-                $(villianChoiceDiv).append($('<img>', { id: 'avatar-v', src: "./Assets/Images/V.jpg" }));  
-                $(villianChoiceDiv).append($('<img>', { id: 'avatar-v', src: "./Assets/Images/V.jpg" }));  
-             
+            $(userChoiceDiv).append(villianChoiceDiv);
+            // Gives villianDiv the class of villianContainer
+            $(villianChoiceDiv).addClass('villianContainer');
+            // Setsd the background-color of the div
+            $('.villianContainer').css('background-color', 'rgb(218, 49, 49)');
+            // Placing villians avatar <img> in the villianContainer
+            $(villianChoiceDiv).append($('<img>', {
+                id: 'avatar-v',
+                src: "./Assets/Images/neo_png.png"
+            }));
+            $(villianChoiceDiv).append($('<img>', {
+                id: 'avatar-v',
+                src: "./Assets/Images/emojirobinhood.png"
+            }));
+
             // Create Battle Area //
             var battleAreaDiv = $('<div></div>')
-                $(containerDiv).append(battleAreaDiv)
-                $(battleAreaDiv).addClass('battleAreaContainer');
-                // Create dumping ground for stats to post after each round//
-                var statsDiv = $('<div id="stats" class="statsContainer textHeader"><h2>Stats</h2></div>');
-                $(battleAreaDiv).append(statsDiv);
-                //$(battleArea).css('background-color','rgb(255,255,255)');
+            $(containerDiv).append(battleAreaDiv)
+            $(battleAreaDiv).addClass('battleAreaContainer');
+            // Create dumping ground for stats to post after each round//
+            var statsDiv = $('<div id="stats" class="statsContainer textHeader"><h2>Stats</h2></div>');
+            $(battleAreaDiv).append(statsDiv);
+            //$(battleArea).css('background-color','rgb(255,255,255)');
 
             // Create 3 cards where opponents will travel to when they battle//
             var characterBattle = $('<div><h2 class="textHeader">Your Character</h2></div>');
-                $(battleAreaDiv).append(characterBattle);
-                $(characterBattle).addClass('userBattleContainer')
+            $(battleAreaDiv).append(characterBattle);
+            $(characterBattle).addClass('userBattleContainer')
             var battleVersus = $('<div><h2>Vs.</h2></div>');
-                $(battleAreaDiv).append(battleVersus);
-                $(battleVersus).addClass('versusContainer')                
+            $(battleAreaDiv).append(battleVersus);
+            $(battleVersus).addClass('versusContainer')
             var villianBattle = $('<div><h2 class="textHeader">Your Opponent</h2></div>');
-                $(battleAreaDiv).append(villianBattle);
-                $(villianBattle).addClass('villanBattleContainer')
-                $(characterBattle).append($('<img>', { id: 'avatar-v', src: "./Assets/Images/V.jpg" })); 
-                $(villianBattle).append($('<img>', { id: 'avatar-v', src: "./Assets/Images/V.jpg" }));
-            // now you need to create avatars and buttons for the characters//
+            $(battleAreaDiv).append(villianBattle);
+            $(villianBattle).addClass('villanBattleContainer')
+                // now you need to create avatars and buttons for the characters//
 
         });
     </script>
