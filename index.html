@@ -100,7 +100,7 @@
         }
         
         .versusContainer {
-            background-color: rgba(113, 194, 241, 0.904) ?;
+            background-color: rgba(113, 194, 241, 0.904);
             font-size: 300%;
         }
         
@@ -120,6 +120,19 @@
         
         #avatar-v {
             align-self: center;
+        }
+        
+        #attack {
+            background-color: rgba(113, 194, 241);
+            border: none;
+            color: red;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            margin: 4px 2px;
+            border-radius: 12px;
         }
     </style>
 
@@ -192,7 +205,7 @@
             var characterBattle = $('<div><h2 class="textHeader">Your Character</h2></div>');
             $(battleAreaDiv).append(characterBattle);
             $(characterBattle).addClass('userBattleContainer')
-            var battleVersus = $('<div><h2>Vs.</h2></div>');
+            var battleVersus = $('<button id="attack">Attack</button>');
             $(battleAreaDiv).append(battleVersus);
             $(battleVersus).addClass('versusContainer')
             var villianBattle = $('<div><h2 class="textHeader">Your Opponent</h2></div>');
