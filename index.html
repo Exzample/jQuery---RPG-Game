@@ -168,12 +168,13 @@
             // Sets the background-color of the div
             $('.heroContainer').css('background-color', 'rgb(255, 255, 255)');
             //Placing user avatar <img> in the .heroContainer
-            var userAvatar = $('<div id="userChoice"></div><br><hr>');
+            var userAvatar = $('<div id="userChoice"></div>');
             $(heroDiv).append(userAvatar);
-            $(heroDiv).append($('<img>', {
-                id: 'avatar-v',
+            var V = $($('<img>', {
+                id: 'V',
                 src: "./Assets/Images/V-Emoji.jpg"
             }));
+            $('#userChoice').append(V);
             // Creates new div to place villians//
             var villianChoiceDiv = $('<div><h2 class="textHeader">Villians go here!</h2></div>');
             // Appends the villianDiv to the containerDiv
@@ -183,15 +184,11 @@
             // Setsd the background-color of the div
             $('.villianContainer').css('background-color', 'rgb(218, 49, 49)');
             // Placing villians avatar <img> in the villianContainer
-            $(villianChoiceDiv).append($('<img>', {
-                id: 'avatar-v',
+            var NEO = $($('<img>', {
+                id: 'NEO',
                 src: "./Assets/Images/neo_png.png"
-            }));
-            $(villianChoiceDiv).append($('<img>', {
-                id: 'avatar-v',
-                src: "./Assets/Images/emojirobinhood.png"
-            }));
-
+            }))
+            $(villianChoiceDiv).append(NEO);
             // Create Battle Area //
             var battleAreaDiv = $('<div></div>')
             $(containerDiv).append(battleAreaDiv)
@@ -212,6 +209,14 @@
             $(battleAreaDiv).append(villianBattle);
             $(villianBattle).addClass('villanBattleContainer')
                 // now you need to create avatars and buttons for the characters//
+
+            $('#userChoice').on("click", function() {
+                $('.userBattleContainer').append(V)
+            });
+            $('#NEO').on("click", function() {
+                $('.villanBattleContainer').append(NEO);
+            });
+
 
         });
     </script>
