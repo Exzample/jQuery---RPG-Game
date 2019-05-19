@@ -1,0 +1,127 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  margin: 2%;
+  background-color: rgb(117, 117, 117);
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 80%;
+  background-color: rgba(113, 194, 241, 0.904);
+  margin: 5% 0% 5% 10%;
+  flex-direction: column;
+}
+
+.userChoiceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: inherit;
+  flex-direction: column;
+  margin: 2%;
+  height: 180px;
+  width: inherit;
+  justify-self: start;
+  flex-direction: row;
+}
+
+.heroContainer {
+  display: flex;
+  align-content: center;
+  flex-wrap: inherit;
+  flex-direction: row;
+  height: inherit;
+  width: inherit;
+  margin-right: 2%;
+}
+
+.villianContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: inherit;
+  flex-direction: row;
+  height: inherit;
+  width: inherit;
+  margin-left: 0%;
+}
+
+.battleAreaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cccccc;
+  height: inherit;
+  width: inherit;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+#stats {
+  display: flex;
+  float: left;
+  justify-content: initial;
+  flex-direction: column;
+  height: 180px;
+  width: inherit;
+  margin: 2%;
+  background-color: rgb(113, 194, 241);
+}
+
+.userBattleContainer {
+  display: flex;
+  justify-self: end;
+  justify-content: center;
+  flex-direction: column;
+  height: 180px;
+  width: inherit;
+  margin: 2%;
+  background-color: rgb(255, 255, 255);
+}
+
+.versusContainer {
+  background-color: rgba(113, 194, 241, 0.904);
+  font-size: 300%;
+}
+
+.villanBattleContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 180px;
+  width: inherit;
+  margin: 2%;
+  background-color: rgb(255, 255, 255);
+}
+
+.textHeader {
+  display: flex;
+}
+
+#avatar-v {
+  align-self: center;
+}
+
+#attack {
+  background-color: rgba(113, 194, 241);
+  border: none;
+  color: red;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
